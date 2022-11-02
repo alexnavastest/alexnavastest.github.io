@@ -1,7 +1,7 @@
 <html lang="en" class=""><head>
 
   <meta charset="UTF-8">
-  <title>CodePen Demo</title>
+  <title>Mundial Qatar 2022</title>
 
   <meta name="robots" content="noindex">
 
@@ -36,7 +36,7 @@ body {
 }
 body #form {
   color: white;
-  background-color: #009EDF;
+  background-color: #01387d; /* #009EDF;*/
   border-radius: 5px;
   width: 400px;
   padding: 40px;
@@ -84,17 +84,44 @@ body #form .form-group input {
   border: none;
   border-radius: 0 5px 5px 0;
 }
-  </style>
+
+#logo{
+	position:relative;
+	left:20%;
+}
+
+#logo_tigo_sport{
+	max-width: 25%;  
+	height: auto; /* 15%; */
+}
+
+#logo_qatar{
+	max-width: 90%;  
+	height: 18%;
+}
+
+#label_x{
+	position:relative;
+	left:5%;
+}
+  </style>	
 
   
-<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-550eae0ce567d3d9182e33cee4e187761056020161aa87e3ef74dc467972c555.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+
 </head>
 
 <body>
   <form id="form">
-   <p>Disfruta de la fiesta del Mundial Quatar 2022 a traves de Tigo Sport por solo $1 +isv al mes y no te pierda de ningun de los emocionantes partidos</p>
+	<div id="logo">
+		<p>
+			<img src="tigo_Sports.png" id= "logo_tigo_sport"/>
+			<label id="label_x">x</label>
+			<img src="logo-qatar.png" id= "logo_qatar"/>
+		</p>
+	</div>
+   <p><strong>Disfruta de la fiesta del Mundial Quatar 2022 a través de Tigo Sport</strong> por solo $1 +isv en tu factura pospago y disfruta de cada de uno de los partidos en vivo en calidad 4k además de tener accesos a repeticiones de cada partido jugado para que no te pierdas ninguno de los mejores momentos del mundial!</p>
+   
+   <p>Vigencia: 20 Nov 2022 al 18 Dic 2022</p>
    <div class="form-group">
       <label for="telefono">Telefono</label>
       <br>
@@ -105,7 +132,7 @@ body #form .form-group input {
       </div>
    
    
-<p><button type="submit" class="btn btn-default">Register</button></p>
+<p><button type="submit" class="btn btn-default" id="enviar">Suscribirse</button></p>
 </form>
 
   
@@ -132,6 +159,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
 $( document ).ready(function() {
     var tel = getUrlParameter('tel');
 	$("#telefono").text(tel);
+	
+	$('body').on('click','#enviar',function(){
+		var confir= confirm("¿Estas segurio de suscribirte al Addon Tigo Sport Mundial?");
+	});
+	
 	console.log( tel );
 });
 
