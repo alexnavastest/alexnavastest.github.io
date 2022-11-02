@@ -1,0 +1,178 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>Mundial Qatar 2022</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/codepenner-pen/pen/wgXzKR">
+  
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    * {
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background-color: #B0DBEE;
+}
+body #form {
+  color: white;
+  background-color: #01387d; /* #009EDF;*/
+  border-radius: 5px;
+  width: 400px;
+  padding: 40px;
+  margin: 150px auto;
+  -webkit-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+}
+body #form p {
+  font-size: 0.9em;
+}
+body #form button {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+body #form .form-group {
+  margin: 15px auto;
+}
+body #form .form-group label {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+body #form .form-group .input-group {
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+}
+body #form .form-group .input-group .input-group-addon {
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+body #form .form-group .input-group input {
+  padding-left: 10px;
+}
+body #form .form-group .input-group i {
+  color: #009EDF;
+}
+body #form .form-group input {
+  padding: 3px;
+  width: 100%;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+#logo{
+	position:relative;
+	left:20%;
+}
+
+#logo_tigo_sport{
+	max-width: 25%;  
+	height: auto; /* 15%; */
+}
+
+#logo_qatar{
+	max-width: 90%;  
+	height: 18%;
+}
+
+#label_x{
+	position:relative;
+	left:5%;
+}
+  </style>	
+
+  
+
+</head>
+
+<body>
+  <form id="form">
+	<div id="logo">
+		<p>
+			<img src="tigo_Sports.png" id= "logo_tigo_sport"/>
+			<label id="label_x">x</label>
+			<img src="logo-qatar.png" id= "logo_qatar"/>
+		</p>
+	</div>
+   <p><strong>Disfruta de la fiesta del Mundial Quatar 2022 a través de Tigo Sport</strong> por solo $1 +isv en tu factura pospago y disfruta de cada de uno de los partidos en vivo en calidad 4k además de tener accesos a repeticiones de cada partido jugado para que no te pierdas ninguno de los mejores momentos del mundial!</p>
+   
+   <p>Vigencia: 20 Nov 2022 al 18 Dic 2022</p>
+   <div class="form-group">
+      <label for="telefono">Telefono</label>
+      <br>
+      <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>            </div>
+         <label type="text" id="telefono"></label>
+         </div>
+      </div>
+   
+   
+<p><button type="submit" class="btn btn-default" id="enviar">Suscribirse</button></p>
+</form>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+<script>
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+$( document ).ready(function() {
+    var tel = getUrlParameter('tel');
+	$("#telefono").text(tel);
+	
+	$('body').on('click','#enviar',function(){
+		var confir= confirm("¿Estas segurio de suscribirte al Addon Tigo Sport Mundial?");
+	});
+	
+	console.log( tel );
+});
+
+
+
+</script>
+
+		
+
+
+
+</body></html>
