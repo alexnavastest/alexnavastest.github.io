@@ -1,0 +1,146 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/codepenner-pen/pen/wgXzKR">
+  
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    * {
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background-color: #B0DBEE;
+}
+body #form {
+  color: white;
+  background-color: #009EDF;
+  border-radius: 5px;
+  width: 400px;
+  padding: 40px;
+  margin: 150px auto;
+  -webkit-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
+}
+body #form p {
+  font-size: 0.9em;
+}
+body #form button {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+body #form .form-group {
+  margin: 15px auto;
+}
+body #form .form-group label {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+body #form .form-group .input-group {
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.35);
+}
+body #form .form-group .input-group .input-group-addon {
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+body #form .form-group .input-group input {
+  padding-left: 10px;
+}
+body #form .form-group .input-group i {
+  color: #009EDF;
+}
+body #form .form-group input {
+  padding: 3px;
+  width: 100%;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-550eae0ce567d3d9182e33cee4e187761056020161aa87e3ef74dc467972c555.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  <form id="form">
+   <p>Disfruta de la fiesta del Mundial Quatar 2022 a traves de Tigo Sport por solo $1 +isv al mes y no te pierda de ningun de los emocionantes partidos</p>
+   <div class="form-group">
+      <label for="telefono">Telefono</label>
+      <br>
+      <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>            </div>
+         <label type="text" id="telefono"></label>
+         </div>
+      </div>
+   
+   
+<p><button type="submit" class="btn btn-default">Register</button></p>
+</form>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+<script>
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+$( document ).ready(function() {
+    var tel = getUrlParameter('tel');
+	$("#telefono").text(tel);
+	console.log( tel );
+});
+
+
+
+</script>
+
+		
+
+
+
+</body></html>
