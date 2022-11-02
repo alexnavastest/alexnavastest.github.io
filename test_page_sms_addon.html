@@ -163,7 +163,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 $( document ).ready(function() {
     var tel = getUrlParameter('tel');
+	
+	const reg = /\D/g;
+	tel = tel.replace(reg, "");
+	
+	
 	$("#telefono").text(tel);
+	
 	
 	$('body').on('click','#enviar',function(){
 		var confir= confirm("¿Estas segurio de suscribirte al Addon Tigo Sport Mundial?");
